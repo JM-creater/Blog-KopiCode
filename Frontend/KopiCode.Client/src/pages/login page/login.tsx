@@ -2,9 +2,10 @@ import { Button, Form, Input } from "antd";
 import Navigation from "../../components/navigation"
 import './login.css'
 import type { FormProps } from "antd";
-import image from '../web images/web-image.png'
 import FilledButton from "../../components/filledButton";
 import { Link } from 'react-router-dom';
+import Lottie from "lottie-react";
+import animation from './lottie animation/dog-animetion.json';
 
 type LoginFieldType = {
     email?: string;
@@ -20,18 +21,17 @@ const onFinishFailed: FormProps<LoginFieldType>['onFinishFailed'] = (errorInfo) 
 };
 
 const Login: React.FC = () => (
-    <div className="login-container">
+    <>
         <Navigation/>
         {/* contains the form and image */}
         <div className="login-content-container">
             {/* container for the form and buttons */}
             <div className="form-container">
-                <span id="greeting">WELCOME BACK BREWSKIE!</span>
-                {/* login form */}
+                <span id="greeting">Welcome Back!</span>
+                {/* LOGIN FORM WITH INPUT FIELDS FOR EMAIL AND PASSWORD */}
                 <Form
                 name="login"
                 id="loginForm"
-                wrapperCol={{ span: 15 }}
                 initialValues={{ remember: true }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -59,12 +59,9 @@ const Login: React.FC = () => (
                 </div>
                 <span id="motto">Sip.Code.Connect.</span>
             </div>
-            {/* End of form container */}
-            {/* <div className="login-image-container"> */}
-                <img src={image} alt="kopicode mascot" id="kopicode-image"/>
-            {/* </div> */}
+            <Lottie id="login-animation" animationData={animation} />
         </div>
-    </div>
+    </>
 );
 
 export default Login

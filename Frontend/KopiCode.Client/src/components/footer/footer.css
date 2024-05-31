@@ -1,0 +1,13 @@
+footer {
+    background-color: black;
+    width: 100vw;               /*adds space above the footer*/
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer img {                            /*web logo*/
+    width: 100%;
+    max-width: 5em;
+}

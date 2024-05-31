@@ -8,14 +8,12 @@ import { RightOutlined } from '@ant-design/icons';
 
 interface MyCardProps extends CardProps {
     title: string,
-    description: string;
   }
 
 
-const BlogContainer: React.FC<MyCardProps> = ({title, description, ...props}) => (
+const BlogContainer: React.FC<MyCardProps> = ({title, ...props}) => (
     <Card
-    id='card__blog'
-      style={{ width: 330 }}
+    className='card__blog'
       cover={
         <img
           alt="example"
@@ -25,8 +23,7 @@ const BlogContainer: React.FC<MyCardProps> = ({title, description, ...props}) =>
       {...props}
     >
       <h4>{title}</h4>
-      <p>{description}</p>
-      <Button ghost>Read Article<RightOutlined /></Button>
+      <Button id='blog__read' type='text'>Read Article <RightOutlined/></Button>
     </Card>
   );
 

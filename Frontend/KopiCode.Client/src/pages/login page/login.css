@@ -11,13 +11,15 @@
 }
 
 #greeting {
-    font-size: 3em;
+    font-size: clamp(2em, 3vw, 3em);
     font-weight: 600;
     color: #64FD23;
 }
 
 #forgotPass, #createAcc {
     color: white;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .login-btn-group {
@@ -35,26 +37,14 @@
     font-weight: 700;
 }
 
-.login-image-container {
-    margin: 0 auto;
-    padding: 0 auto;
-    max-height: fit-content;
-    max-width: fit-content;
-}
-
 #loginForm {
     width: 40em;
 }
 
-#kopicode-image {
-    width: 100%;
-    max-width: 30em;
-    height: auto;
-    max-height: fit-content;
-}
 #login-input {
     background-color: transparent;
     color: white;
+    max-width: 20em;
 }
 
 #login-input::placeholder {
@@ -64,4 +54,42 @@
 #motto {
     color: white;
     font-size: 30px;
+}
+
+#login-animation {
+    max-width: fit-content;
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-content-container {
+        flex-flow: column;
+    }
+    .form-container {
+        display: flex;
+        max-width: 100%;
+        flex-flow: column;
+        margin-top: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login-input {
+        max-width: 40%;
+        margin-left: 10.7em;
+    }
+
+    .login-btn-group {
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+
+    #login-animation {
+        max-width: 8em;
+    }
+
+    .form-container {
+        height: 22em;
+    }
 }

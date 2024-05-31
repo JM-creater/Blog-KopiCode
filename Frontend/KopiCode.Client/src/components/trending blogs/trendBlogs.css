@@ -1,0 +1,10 @@
+#tabs__container {
+    width: 100%;
+    min-height: 90vh;
+    padding: 8em 10px;
+    color: white;
+}
+
+#tabs__container span {
+    font-size: 20px;
+}

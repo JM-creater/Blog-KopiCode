@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "max-height: fit-content",
+          "max-width: fit-content",
+          "height: fit-content",
+          "-webkit-text-size-adjust",
+          "-webkit-tap-highlight-color",
+          "backdrop-filter"
+        ]
+      }
+    ]
+  }
+}

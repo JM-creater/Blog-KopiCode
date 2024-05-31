@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  height: fit-content;
+  max-width: fit-content;
+  display: -ms-flexbox;
+  justify-content: left;
+  margin: 0 auto;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+/* For all browsers supporting scrollbar customization */
+/* Width of the scrollbar */
+body::-webkit-scrollbar {
+  width: 12px; /* for Chrome, Safari, Opera */
+}
+body::-moz-scrollbar {
+  width: 12px; /* for Firefox */
+}
+body::-ms-scrollbar {
+  width: 12px; /* for Edge */
+}
+/* Track color */
+body::-webkit-scrollbar-track {
+  background: #070707; /* for Chrome, Safari, Opera */
+}
+body::-moz-scrollbar-track {
+  background: #070707; /* for Firefox */
+}
+body::-ms-scrollbar-track {
+  background: #070707; /* for Edge */
+}
+/* Handle color */
+body::-webkit-scrollbar-thumb {
+  background-color: #252424; /* for Chrome, Safari, Opera */
+  border-radius: 12px; /* for rounded corners */
+}
+body::-moz-scrollbar-thumb {
+  background-color: #252424; /* for Firefox */
+}
+body::-ms-scrollbar-thumb {
+  background-color: #252424; /* for Edge */
+}
+

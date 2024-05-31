@@ -1,0 +1,19 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  min-width: 100vw;
+}
+
+body {
+  background: linear-gradient(#001219 40%, #00211E);
+  margin: 0px;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  max-height: fit-content;
+
+}
+
+#root {
+  min-height: 100%;
+}

@@ -1,0 +1,37 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+#signUp-input {
+    background-color: transparent;
+    color: white;
+    width: 20em;
+}
+
+.signUpForm {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signUp-input::placeholder {
+    color: white;
+}
+
+a, #already-registered-btn {
+    color: #64FD23;
+}
+
+#already-have-span {
+    color: white;
+}
+
+#sign-up-btn {
+    margin-top: 25px;
+}

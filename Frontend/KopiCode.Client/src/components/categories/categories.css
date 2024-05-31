@@ -1,0 +1,11 @@
+.category__container {
+    max-width: 80%;
+    background-color: #000000;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}

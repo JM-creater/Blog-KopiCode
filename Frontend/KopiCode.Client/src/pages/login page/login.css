@@ -1,0 +1,67 @@
+.login-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    height: 25em;
+}
+
+#greeting {
+    font-size: 3em;
+    font-weight: 600;
+    color: #64FD23;
+}
+
+#forgotPass, #createAcc {
+    color: white;
+}
+
+.login-btn-group {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.login-btn {
+    background-color: #64FD23;
+    font-size: 15px;
+    border: none;
+    width: 10em;
+    font-weight: 700;
+}
+
+.login-image-container {
+    margin: 0 auto;
+    padding: 0 auto;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+#loginForm {
+    width: 40em;
+}
+
+#kopicode-image {
+    width: 100%;
+    max-width: 30em;
+    height: auto;
+    max-height: fit-content;
+}
+#login-input {
+    background-color: transparent;
+    color: white;
+}
+
+#login-input::placeholder {
+    color: white;
+}
+
+#motto {
+    color: white;
+    font-size: 30px;
+}

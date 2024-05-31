@@ -1,0 +1,9 @@
+#card__blog {
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+}
+
+#card__blog Button:hover {
+    color: #64FD23;
+    border-color: #64FD23;
+}

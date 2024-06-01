@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\KopiCode.Application\KopiCode.Application.csproj" />
+    <ProjectReference Include="..\KopiCode.Contract\KopiCode.Contract.csproj" />
+    <ProjectReference Include="..\KopiCode.Infrastructure\KopiCode.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

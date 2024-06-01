@@ -1,8 +1,7 @@
 import { Button, Form, Input } from "antd";
-import Navigation from "../../components/navigation"
+import NavigationBar from "../../components/Navbar Landing/NavigationBar";
 import './login.css'
 import type { FormProps } from "antd";
-import FilledButton from "../../components/filledButton";
 import { Link } from 'react-router-dom';
 import Lottie from "lottie-react";
 import animation from './lottie animation/dog-animetion.json';
@@ -22,7 +21,7 @@ const onFinishFailed: FormProps<LoginFieldType>['onFinishFailed'] = (errorInfo) 
 
 const Login: React.FC = () => (
     <>
-        <Navigation/>
+        <NavigationBar/>
         {/* contains the form and image */}
         <div className="login-content-container">
             {/* container for the form and buttons */}
@@ -55,7 +54,6 @@ const Login: React.FC = () => (
                     <Button type='text' id="forgotPass">Forgot Password?</Button>
                     {/* redirects user to sign up page */}
                     <Link to='/signup'><Button type='text' id="createAcc">Don't have an account yet? Create one now!</Button></Link>
-                    <FilledButton label="Sign In"/>
                 </div>
                 <span id="motto">Sip.Code.Connect.</span>
             </div>

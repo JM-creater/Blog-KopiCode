@@ -1,9 +1,7 @@
-import { Form, Input } from 'antd';
-import Navigation from '../../components/navigation';
+import { Button, Form, Input } from 'antd';
+import NavigationBar from '../../components/Navbar Landing/NavigationBar';
 import './signup.css'
 import { Link } from 'react-router-dom';
-import StyledCheckbox from '../../components/styledCheckbox';
-import FilledButton from '../../components/filledButton';
 import { Register } from '../../models/Register';
 import { useRegister } from '../../hooks/useRegister';
 
@@ -12,7 +10,7 @@ const SignUp: React.FC = () => {
     const { onSuccessSignUp, onFailedSignUp, isLoading, form } = useRegister();
 
     return <>
-    <Navigation/>
+    <NavigationBar/>
         <div className="signup-container">
             <h1 id='signup-text'>Create Your Account</h1>
             {/* SIGN UP FORM */}
@@ -49,13 +47,13 @@ const SignUp: React.FC = () => {
                     valuePropName="checked"
                     rules={[{ required: true, message:'You must agree to the terms' }]}>
                     <div className="terms-and-conditions-checkbox">
-                        <StyledCheckbox label={''} /><a href="">Terms and Conditions</a>
                     </div>
                 </Form.Item>
                 {/* GO TO SIGN IN BUTTON */}
                 <span id='already-have-span' title='Return to Sign In Page'>Already have an account? <Link to='/login' id='already-registered-btn'> Click here to sign in.</Link></span>
                 <Form.Item>
-                    <FilledButton label={'Sign Up'} id='sign-up-btn' htmlType='submit' loading={isLoading}/>
+                    <Button id='sign-up-btn' htmlType='submit' loading={isLoading}>Submit</Button>
+                    {/* <FilledButton label={'Sign Up'} /> */}
                 </Form.Item>
             </Form>
         </div>

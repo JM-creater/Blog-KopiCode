@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-  background: linear-gradient(#001219 40%, #00211E);
+  background-color: var(--color-lightGrey);
   margin: 0px;
   background-size: cover;
   background-attachment: fixed;

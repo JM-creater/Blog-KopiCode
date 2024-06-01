@@ -1,0 +1,13 @@
+nav {
+    padding: 10px 20px;
+    max-height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+}
+
+#webLogo {
+    width: 100%;
+    max-width: 10em;
+}

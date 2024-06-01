@@ -1,13 +1,13 @@
 footer {
-    background-color: black;
+    background-color: var(--color-black);
     width: 100vw;               /*adds space above the footer*/
     display: inline-block;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 20px;
 }
 
-footer img {                            /*web logo*/
+#footer-webLogo {
     width: 100%;
-    max-width: 5em;
+    max-width: 12em;
+    line-height: 0;
 }

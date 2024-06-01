@@ -1,49 +1,90 @@
-.landing-container {
+/*START OF HERO SECTION*/
+.Hero {
     display: flex;
-    min-width: 100vw;
-    height: 100%;
-    max-height: 100vw;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    flex-direction: row;
+    background-image: url(./landingPageImages/bg_image.png);
+    background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1;
+}
 
-    .mainContent-container {
-        max-width: 100%;
+#hero__text {
+    width: 20em;
+    font-size: 25px;
+}
+
+.content1, .content2 {
+    height: 100vh;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content1 {
+    justify-content: start;
+    align-items: center;
+}
+
+.content2 {
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    width: 70vw;
+    padding: 0;
+}
+
+#hero-animation {
+    width: 100%;
+    max-width: 100%;
+}
+/*END OF HERO SECTION*/
+
+/*START OF FEATURES SECTION*/
+header {
+    background-color: var(--color-black);
+    margin-bottom: 2em;
+}
+
+.features__headerText {
+    color: white;
+}
+
+.mainContent__features {
+    display: flex;
+    flex-direction: column;
+}
+.feature1, .feature2, .feature3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+#feature__animation {
+    width: 100%;
+    max-width: 30%;
+}
+/*END OF FEATURES SECTION*/
+
+@media only screen and (max-width: 800px) {
+    .Hero {
+        flex-direction: column;
     }
 
-    .blogs__trending {
-        max-width: 100%;
-        flex-flow: column;
-        flex-wrap: nowrap;
-        overflow: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    h1 {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .header-container div h2 {
-        max-width: 100%;
-        text-align: left;
-        padding: 15px;
-    }
-
-    .categories-container h1 {
-        width: 100%;
-    }
-
-    .header-container {
+    .content1, .content2 {
         height: fit-content;
-    }
-
-    /*Category buttons and container*/
-    .categories-types {
-        width: 100%;
+        width: fit-content;
+        text-align: center;
     }
 }

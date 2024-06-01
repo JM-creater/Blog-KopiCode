@@ -1,0 +1,15 @@
+#OutlinedButton {
+    border-color: var(--color-black);
+    color: var(--color-black);
+}
+
+#TextButton {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/*when buttonsd are hovered*/
+#OutlinedButton:hover, #TextButton:hover {
+    color: var(--color-blue);
+}

@@ -9,6 +9,12 @@
   margin: 0 auto;
   padding: 0px;
   overflow-x: hidden;
+
+  /*Colors*/
+  --color-grey: #E6E8E6;
+  --color-lightGrey: #F5F5F5;
+  --color-blue: #228CDB;
+  --color-black: #11151C;
 }
 
 /* For all browsers supporting scrollbar customization */

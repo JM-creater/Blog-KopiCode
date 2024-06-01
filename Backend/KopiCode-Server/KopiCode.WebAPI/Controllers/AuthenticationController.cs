@@ -23,7 +23,7 @@ public class AuthenticationController : ControllerBase
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<RegisterRequest>> Register(
-         [FromForm] RegisterCommand command,
+         [FromBody] RegisterCommand command,
          CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(command, cancellationToken);

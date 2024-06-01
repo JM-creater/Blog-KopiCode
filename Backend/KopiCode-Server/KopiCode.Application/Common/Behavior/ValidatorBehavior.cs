@@ -30,13 +30,9 @@ public sealed class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<
 
         foreach (var failure in errors)
         {
-            if (failure.PropertyName == "FirstName" && failure.ErrorCode == "400")
+            if (failure.PropertyName == "FullName" && failure.ErrorCode == "400")
             {
-                throw new FirstNameEmptyException();
-            }
-            if (failure.PropertyName == "LastName" && failure.ErrorCode == "400")
-            {
-                throw new LastNameEmptyException();
+                throw new FullNameEmptyException();
             }
             if (failure.PropertyName == "Password" && failure.ErrorCode == "400")
             {

@@ -4,8 +4,7 @@ using MediatR;
 namespace KopiCode.Application.Features.AuthFeatures.Commands;
 
 public sealed record RegisterCommand(
-    string FirstName,
-    string LastName,
+    string FullName,
     string Email,
     string Password,
     bool TermCondition) : IRequest<RegisterRequest>;

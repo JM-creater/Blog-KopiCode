@@ -29,10 +29,9 @@ public class KopiCodeContext : DbContext
         modelBuilder.Entity<User>().HasData(
             new User(
                 id: Guid.NewGuid(),
-                firstName: "Admin",
-                lastName: "Admin",
+                fullName: "Admin Admin",
                 email: "admin@gmail.com",
-                password: passwordEncryption.HashPassword("admin123"),
+                password: "admin123",
                 termCondition: true,
                 isActive: true,
                 role: UserRole.Admin

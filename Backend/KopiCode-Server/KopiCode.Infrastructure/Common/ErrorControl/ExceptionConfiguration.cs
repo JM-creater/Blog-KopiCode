@@ -17,14 +17,9 @@ public class ExceptionConfiguration : IExceptionConfiguration
 
     public async Task CustomerRegisterValidator(RegisterCommand command)
     {
-        if (string.IsNullOrWhiteSpace(command.FirstName))
+        if (string.IsNullOrWhiteSpace(command.FullName))
         {
-            throw new FirstNameEmptyException();
-        }
-
-        if (string.IsNullOrWhiteSpace(command.LastName))
-        {
-            throw new LastNameEmptyException();
+            throw new FullNameEmptyException();
         }
 
         if (string.IsNullOrWhiteSpace(command.Email))

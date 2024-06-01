@@ -1,25 +1,37 @@
+using KopiCode.Application;
+using KopiCode.Infrastructure;
+using KopiCode.WebAPI;
+using KopiCode.WebAPI.Common.Errors;
+using KopiCode.WebAPI.Common.Policy;
+
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    builder.Services.AddCompression()
+                    .AddPresentation()
+                    .AddApplication()
+                    .AddInfrastructure(builder.Configuration)
+                    .AddCorsPolicy();
 }
 
-app.UseHttpsRedirection();
+var app = builder.Build();
+{
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseSwagger();
+        app.UseSwaggerUI();
+    }
 
-app.UseAuthorization();
+    app.UseMiddleware<ExceptionHandlingMiddleware>();
 
-app.MapControllers();
+    //app.MapHealthChecks("/health");
 
-app.Run();
+    app.UseHttpsRedirection();
+
+    app.UseCors();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
+};

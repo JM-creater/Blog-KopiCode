@@ -58,7 +58,7 @@ const SignUp: React.FC = () => {
                 </div>
                     {/* GO TO SIGN IN BUTTON */}
                 <span id='already-have-span' title='Return to Sign In Page'>Already have an account? <Link to='/login' id='already-registered-btn'> Click here to sign in.</Link></span>
-                <FilledButton label={'Sign Up'} id='sign-up-btn'/>
+                <FilledButton label={'Sign Up'} id='sign-up-btn' htmlType='submit'/>
             </Form>
     </div>
     </>

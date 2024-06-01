@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KopiCode.Domain\KopiCode.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

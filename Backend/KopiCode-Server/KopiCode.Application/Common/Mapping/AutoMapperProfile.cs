@@ -16,8 +16,7 @@ public class AutoMapperProfile : Profile
             .ForMember(dest => dest.Password, opt => opt.Ignore())
             .ConstructUsing(src => new User(
                 Guid.NewGuid(),
-                src.FirstName,
-                src.LastName,
+                src.FullName,
                 src.Email,
                 src.Password,
                 src.TermCondition,
@@ -30,7 +29,6 @@ public class AutoMapperProfile : Profile
         CreateMap<LoginQueries, User>()
             .ConstructUsing(src => new User(
                 Guid.NewGuid(),
-                string.Empty,
                 string.Empty,
                 src.Email,
                 string.Empty, 

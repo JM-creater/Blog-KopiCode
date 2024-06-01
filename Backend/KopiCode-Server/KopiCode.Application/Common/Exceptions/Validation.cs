@@ -35,22 +35,13 @@ public class EmailPasswordMismatchException : BaseException
 #endregion 
 
 #region Register
-public class FirstNameEmptyException : BaseException
+public class FullNameEmptyException : BaseException
 {
-    public FirstNameEmptyException()
-        : base("First name cannot be empty.", StatusCodes.Status400BadRequest)
+    public FullNameEmptyException()
+        : base("First name and Last name cannot be empty.", StatusCodes.Status400BadRequest)
     {
     }
 }
-
-public class LastNameEmptyException : BaseException
-{
-    public LastNameEmptyException()
-        : base("Last name cannot be empty.", StatusCodes.Status400BadRequest)
-    {
-    }
-}
-
 public class EmailEmptyException : BaseException
 {
     public EmailEmptyException()

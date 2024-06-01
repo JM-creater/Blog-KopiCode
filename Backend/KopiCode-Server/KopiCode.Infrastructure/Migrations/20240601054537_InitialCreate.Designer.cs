@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KopiCode.Infrastructure.Migrations
 {
     [DbContext(typeof(KopiCodeContext))]
-    [Migration("20240601021654_InitialCreate")]
+    [Migration("20240601054537_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -41,19 +41,22 @@ namespace KopiCode.Infrastructure.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
@@ -68,15 +71,14 @@ namespace KopiCode.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("eb1b5de3-b9e3-4a2f-80ee-09ab3863d040"),
+                            Id = new Guid("823ca894-8e39-4986-9f85-afa36c6428b5"),
                             DateCreated = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             DateDeleted = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             DateUpdated = new DateTimeOffset(new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             Email = "admin@gmail.com",
-                            FirstName = "Admin",
+                            FullName = "Admin Admin",
                             IsActive = true,
-                            LastName = "Admin",
-                            Password = "JAvlGPq9JyTdtvBO6x2llnRI1+gxwIyPqCKAn3THIKk=",
+                            Password = "admin123",
                             Role = 20,
                             TermCondition = true
                         });

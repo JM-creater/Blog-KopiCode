@@ -13,9 +13,10 @@ h1 {
     line-height: 1;
 }
 
-#hero__text {
-    width: 20em;
-    font-size: 25px;
+#hero__text2 {
+    width: 23em;
+    font-size: clamp(25px 2.5vw, 40px);
+    text-align: center;
 }
 
 .content1, .content2 {
@@ -69,6 +70,7 @@ header {
 
 h2 {
     font-weight: 300;
+    width: 20em;
 }
 
 #feature__animation {

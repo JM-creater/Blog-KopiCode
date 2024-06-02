@@ -1,13 +1,15 @@
 import { Button, Form, Input } from "antd";
-import NavigationBar from "../../components/Navbar Landing/NavigationBar";
 import './login.css'
 import type { FormProps } from "antd";
 import { Link } from 'react-router-dom';
+import webLogoLogin from '../../components/logo-image/dark-logo.png';
 import Lottie from "lottie-react";
 import animation from './lottie animation/dog-animetion.json';
+import OutlinedButton from "../../components/Buttons/OutlinedButton";
+import FilledButton from "../../components/Buttons/FilledButton";
 
 type LoginFieldType = {
-    email?: string;
+    username?: string;
     password?: string;
 };
 
@@ -21,13 +23,16 @@ const onFinishFailed: FormProps<LoginFieldType>['onFinishFailed'] = (errorInfo) 
 
 const Login: React.FC = () => (
     <>
-        <NavigationBar/>
-        {/* contains the form and image */}
-        <div className="login-content-container">
-            {/* container for the form and buttons */}
-            <div className="form-container">
-                <span id="greeting">Welcome Back!</span>
-                {/* LOGIN FORM WITH INPUT FIELDS FOR EMAIL AND PASSWORD */}
+    <nav className="login__nav">
+            <Link to='/'><img id="login__webLogo" src={webLogoLogin} alt="web logo for login page" /></Link>
+            <Link to='/signup'><OutlinedButton label={"Sign Up"} id="login_signUpButton"/></Link>
+    </nav>
+    <div className="login__mainContent">
+        <div className="login__content1">
+            {/* container for the form*/}
+            <div className="login__form">
+                <h2 id="login__formHeader">Sign In</h2>
+                {/* LOGIN FORM WITH INPUT FIELDS FOR USERNAME AND PASSWORD */}
                 <Form
                 name="login"
                 id="loginForm"
@@ -36,11 +41,11 @@ const Login: React.FC = () => (
                 onFinishFailed={onFinishFailed}
                 autoComplete="off">
                     
-                    {/* Email */}
+                    {/* Username */}
                     <Form.Item<LoginFieldType>
-                        name="email"
+                        name="username"
                         rules={[{ required: true, message: 'Please enter your email!' }]}>
-                        <Input id="login-input" placeholder="Email" size="large"/>
+                        <Input id="login-input" placeholder="Username" size="large"/>
                     </Form.Item>
                     {/* Password */}
                     <Form.Item<LoginFieldType>
@@ -50,15 +55,15 @@ const Login: React.FC = () => (
                     </Form.Item>
                 </Form>
                 {/* BUTTONS FOR FORGOT PASSWORD, CREATE, AND SIGN IN */}
-                <div className="login-btn-group">
-                    <Button type='text' id="forgotPass">Forgot Password?</Button>
-                    {/* redirects user to sign up page */}
-                    <Link to='/signup'><Button type='text' id="createAcc">Don't have an account yet? Create one now!</Button></Link>
-                </div>
-                <span id="motto">Sip.Code.Connect.</span>
+                <Button title="click here to reset password" type='text' id="login__forgotPassButton">Forgot Password?</Button>
+                <FilledButton id="login__signInButton" label="Sign In"/>
             </div>
-            <Lottie id="login-animation" animationData={animation} />
         </div>
+        <div className="login__content2">
+            <Lottie id="login__animation" animationData={animation} />
+            <span id="login__catchPhrase">Sip.Code.Connect.</span>
+        </div>
+    </div>
     </>
 );
 

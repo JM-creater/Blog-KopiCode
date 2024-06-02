@@ -1,95 +1,64 @@
-.login-content-container {
+.login__mainContent {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    background-image: url(../../images/bg_image.png);
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: 75%; /* Makes the image smaller */
+    background-position: right bottom; /* Moves the image to the lowest right corner */
+    height: 100vh; /* Ensure the container is full height for demonstration */
+}
+
+.login__content1, .login__content2 {
+    width: 50%;
     height: 100vh;
-}
-
-.form-container {
-    height: 25em;
-}
-
-#greeting {
-    font-size: clamp(2em, 3vw, 3em);
-    font-weight: 600;
-    color: #64FD23;
-}
-
-#forgotPass, #createAcc {
-    color: white;
-    font-weight: 500;
-    font-size: 15px;
-}
-
-.login-btn-group {
     display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.login-btn {
-    background-color: #64FD23;
-    font-size: 15px;
-    border: none;
-    width: 10em;
-    font-weight: 700;
-}
-
-#loginForm {
-    width: 40em;
-}
-
-#login-input {
-    background-color: transparent;
-    color: white;
-    max-width: 20em;
-}
-
-#login-input::placeholder {
-    color: white;
-}
-
-#motto {
-    color: white;
-    font-size: 30px;
-}
-
-#login-animation {
-    max-width: fit-content;
+#login__webLogo {
     width: 100%;
+    max-width: 10em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .login-content-container {
-        flex-flow: column;
-    }
-    .form-container {
-        display: flex;
-        max-width: 100%;
-        flex-flow: column;
-        margin-top: 60px;
-        justify-content: center;
-        align-items: center;
-    }
+#login__formHeader {
+    color: var(--color-lightGrey);
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+}
 
-    #login-input {
-        max-width: 40%;
-        margin-left: 10.7em;
-    }
+.login__form {
+    background-color: var(--color-black);
+    height: 65vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
 
-    .login-btn-group {
-        justify-content: center;
-        align-items: center;
-        height: fit-content;
-    }
+#login__animation {
+    width: 100%;
+    max-width: 30em;
+}
 
-    #login-animation {
-        max-width: 8em;
-    }
+#login__forgotPassButton {
+    color: var(--color-lightGrey);
+    margin-left: 13em;
+    align-self: flex-start;
+    margin-bottom: 5em;
+}
 
-    .form-container {
-        height: 22em;
-    }
+#login__catchPhrase {
+    font-size: 30px;
+    color: var(--color-black);
 }

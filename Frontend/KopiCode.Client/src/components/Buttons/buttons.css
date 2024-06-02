@@ -13,3 +13,20 @@
 #OutlinedButton:hover, #TextButton:hover {
     color: var(--color-blue);
 }
+
+.FilledButton {
+    background-color: var(--color-blue);
+    border: none;
+    color: white;
+    width: 10em;
+    font-weight: 600;
+}
+
+.FilledButtonDark {
+    background-color: var(--color-black);
+    border: none;
+    border-color: inherit;
+    color: white;
+    font-weight: 600;
+    width: 10em;
+}

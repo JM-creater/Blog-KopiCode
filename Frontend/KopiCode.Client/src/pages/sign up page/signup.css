@@ -1,37 +1,93 @@
-.signup-container {
+.signUp__mainContent {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.signUp__content1 {
+    background-color: var(--color-black);
+    height: 100vh;
+    margin: 0 auto;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    gap: 20px;
+    position: relative;
 }
 
-#signUp-input {
-    background-color: transparent;
-    color: white;
-    width: 20em;
-}
-
-.signUpForm {
+.signUp__content2 {
+    width: 50%;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+}
+
+#signUp__webLogo {
+    width: 100%;
+    max-width: 10em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.signUp__form {
+    max-width: 40em;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#signUp-input::placeholder {
-    color: white;
+#signUp__input {
+    width: 20em;
+    background-color: transparent;
+    color: var(--color-lightGrey);
 }
 
-a, #already-registered-btn {
-    color: #64FD23;
+#signUp__input::placeholder {
+    color: var(--color-lightGrey);
 }
 
-#already-have-span {
-    color: white;
+#signUp__animation {
+    width: 100%;
+    max-width: 100vh;
 }
 
-#sign-up-btn {
-    margin-top: 25px;
+#signUp__termsCondition {
+    color: var(--color-lightGrey);
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+/*TEXT HEADER ="Let's Get Started"*/
+#signUp__formHeader {
+    color: var(--color-lightGrey);
+    font-size: 2.5em;
+}
+
+
+/*WEBSITE CHANGE TO PHONE SCEREN SIZE DIMENSION*/
+@media only screen and (max-width: 800px) {
+    .signUp__mainContent {
+        flex-direction: column;
+    }
+
+    .signUp__content1, .signUp__content2 {
+        width: 100%;
+    }
+    .signUp__content1 {
+        height: 90vh;
+    }
+
+    #signUp__webLogo {
+        max-width: 7em;
+    }
+
+    #signUp__content2Header {
+        font-size: 2.5em;
+    }
 }

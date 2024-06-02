@@ -1,11 +1,13 @@
 import './landing.css'
-import NavigationBar from '../../components/Navbar Landing/NavigationBar';
+import NavigationBar from '../../components/Navbar.Landing/NavigationBar';
 import Footer from '../../components/footer/footer';
 import Lottie from 'lottie-react';
-import bloggingAnimated from './lottie animations/hero-animation.json';
-import feature1 from './lottie animations/blog-animation.json';
-import feature2 from './lottie animations/notes-animation.json';
-import feature3 from './lottie animations/thinking-animation.json';
+import bloggingAnimated from './lottieAnimations/hero-animation.json';
+import feature1 from './lottieAnimations/blog-animation.json';
+import feature2 from './lottieAnimations/notes-animation.json';
+import feature3 from './lottieAnimations/thinking-animation.json';
+import FilledButtonDark from '../../components/Buttons/FilledButtonDark';
+import { Link } from 'react-router-dom';
 
 function Landing (){
     return <>
@@ -13,8 +15,9 @@ function Landing (){
         {/* START OF HERO SECTION */}
             <div className="Hero">
                 <div className="content1">
-                    <h1>Share Your Coding Journey</h1>
-                    <p id='hero__text'>Your experiences and insights can inspire and help fellow developers. Share your coding journey today!</p>
+                    <h1 id='hero__text'>Share Your Coding Journey</h1>
+                    <p id='hero__text2'>Your experiences and insights can inspire and help fellow developers. Share your coding journey today!</p>
+                    <Link to='/signup'><FilledButtonDark label={'Get Started'}/></Link>
                 </div>
                 <div className="content2">
                     <Lottie id='hero-animation' animationData={bloggingAnimated}/>

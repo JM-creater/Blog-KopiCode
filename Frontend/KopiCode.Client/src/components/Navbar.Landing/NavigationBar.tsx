@@ -11,7 +11,7 @@ export default function NavigationBar (){
         <Link to='/'><img src={WebLogo} alt="web logo dark color" id='webLogo' /></Link>
         <div className="nav__buttonGroup">
             <Link to='/aboutUs'><TextButton label={'About Us'}/></Link>
-            <Link to='/signup'><OutlinedButton label={'Sign In'}/></Link>
+            <Link to='/login'><OutlinedButton label={'Sign In'}/></Link>
         </div>
     </nav>
 }

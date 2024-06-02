@@ -24,7 +24,7 @@
     max-width: 10em;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 2;
     padding: 10px;
 }
 
@@ -44,6 +44,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    padding-bottom: 25px;
 }
 
 #login__animation {

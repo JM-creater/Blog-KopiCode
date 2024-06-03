@@ -33,6 +33,7 @@
     text-align: center;
     font-weight: 600;
     font-size: 35px;
+    width: 100%;
 }
 
 .login__form {
@@ -56,10 +57,44 @@
     color: var(--color-lightGrey);
     margin-left: 13em;
     align-self: flex-start;
-    margin-bottom: 5em;
+    
+}
+
+#login__createAccountButton {
+    color: var(--color-lightGrey);
+    margin-left: 3em;
+    margin-bottom: 4em;
+    align-self: flex-start;
 }
 
 #login__catchPhrase {
     font-size: 30px;
     color: var(--color-black);
+}
+
+@media only screen and (max-width: 800px) {
+    .login__mainContent {
+        flex-direction: column;
+        height: fit-content;
+        background-size: 100%;
+    }
+    
+    .login__form {
+        width: 20em;
+    }
+
+    #login__forgotPassButton {
+        margin-left: 10em;
+    }
+
+    .login__content1, .login__content2 {
+        height: fit-content;
+        padding-top: 5em;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: fit-content;
+        padding: 0 auto;
+        margin: 0 auto;
+    }
 }

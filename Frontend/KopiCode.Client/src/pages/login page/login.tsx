@@ -2,11 +2,10 @@ import { Button, Form, Input } from "antd";
 import './login.css'
 import type { FormProps } from "antd";
 import { Link } from 'react-router-dom';
-import webLogoLogin from '../../components/logo-image/dark-logo.png';
 import Lottie from "lottie-react";
 import animation from './lottie animation/dog-animetion.json';
-import OutlinedButton from "../../components/Buttons/OutlinedButton";
 import FilledButton from "../../components/Buttons/FilledButton";
+import NavigationBar from '../../components/Navbar.Landing/NavigationBar'
 
 type LoginFieldType = {
     username?: string;
@@ -23,10 +22,7 @@ const onFinishFailed: FormProps<LoginFieldType>['onFinishFailed'] = (errorInfo) 
 
 const Login: React.FC = () => (
     <>
-    <nav className="login__nav">
-            <Link to='/'><img id="login__webLogo" src={webLogoLogin} alt="web logo for login page" /></Link>
-            <Link to='/signup'><OutlinedButton label={"Sign Up"} id="login_signUpButton"/></Link>
-    </nav>
+    <NavigationBar/>
     <div className="login__mainContent">
         <div className="login__content1">
             {/* container for the form*/}
@@ -56,6 +52,7 @@ const Login: React.FC = () => (
                 </Form>
                 {/* BUTTONS FOR FORGOT PASSWORD, CREATE, AND SIGN IN */}
                 <Button title="click here to reset password" type='text' id="login__forgotPassButton">Forgot Password?</Button>
+                <Link to='/signup'><Button title="Click here to create an account" type='text' id="login__createAccountButton">Don't have an account yet?</Button></Link>
                 <FilledButton id="login__signInButton" label="Sign In"/>
             </div>
         </div>

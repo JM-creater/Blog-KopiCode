@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify';
 import { toastConfig } from './utils/toastConfig';
 import React from 'react';
 import { UserAuthRegisterProvider } from './state/RegisterState';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route index element={ <Landing/> }/>
           <Route path='/login' element={ <Login />}/>
+          <Route path='/aboutUs' element={ <AboutUs />}/>
           <Route 
             path='/signup' 
             element={ 

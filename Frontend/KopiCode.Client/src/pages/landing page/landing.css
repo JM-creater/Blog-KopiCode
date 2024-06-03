@@ -7,7 +7,7 @@
 }
 
 h1 {
-    font-size: 60px;
+    font-size: clamp(40px, 2.5vw, 60px);
     font-weight: 700;
     text-align: center;
     line-height: 1;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .content1 {
-    justify-content: start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -54,6 +54,7 @@ header {
 
 .features__headerText {
     color: white;
+    font-size: clamp(35px, 3.5vw, 50em);
 }
 
 .mainContent__features {
@@ -88,5 +89,13 @@ h2 {
         height: fit-content;
         width: fit-content;
         text-align: center;
+    }
+
+    #hero__text {
+        padding-top: 2em;
+    }
+
+    #landing__features {
+        font-size: 15px;
     }
 }

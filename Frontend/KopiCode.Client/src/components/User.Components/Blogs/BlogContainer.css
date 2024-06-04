@@ -1,0 +1,16 @@
+#blog__container {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    height: 35em;
+    max-height: fit-content;
+    border-radius: 20px;
+}
+
+.blog__userInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 9em;
+}

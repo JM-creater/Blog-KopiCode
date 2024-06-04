@@ -1,5 +1,4 @@
 import './landing.css'
-import NavigationBar from '../../components/Navbar.Landing/NavigationBar';
 import Footer from '../../components/footer/footer';
 import Lottie from 'lottie-react';
 import bloggingAnimated from './lottieAnimations/hero-animation.json';
@@ -11,7 +10,6 @@ import { Link } from 'react-router-dom';
 
 function Landing (){
     return <>
-        <NavigationBar/>
         {/* START OF HERO SECTION */}
             <div className="Hero">
                 <div className="content1">

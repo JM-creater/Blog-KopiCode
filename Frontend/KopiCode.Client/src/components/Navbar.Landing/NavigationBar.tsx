@@ -5,7 +5,7 @@ import OutlinedButton from '../Buttons/OutlinedButton';
 import TextButton from '../Buttons/TextButton';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
-// import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 
 //to make the navbar transparent when scrolling down
 export default function NavigationBar (){
@@ -28,12 +28,17 @@ export default function NavigationBar (){
 },[]);
 
     return (
-    <nav id='navbar'>
-        <Link to='/'><img src={WebLogo} alt="web logo dark color" id='webLogo' /></Link>
-        <div className="nav__buttonGroup">
-            <Link to='/aboutUs'><TextButton label={'About Us'}/></Link>
-            <Link to='/login'><OutlinedButton label={'Sign In'}/></Link>
-        </div>
-    </nav>
+        <>
+            <nav id='navbar'>
+                <Link to='/'><img src={WebLogo} alt="web logo dark color" id='webLogo' /></Link>
+                <div className="nav__buttonGroup">
+                    <Link to='/aboutUs'><TextButton label={'About Us'}/></Link>
+                    <Link to='/login'><OutlinedButton label={'Sign In'}/></Link>
+                </div>
+            </nav>
+            <div style={{ minHeight: '100%'}}>
+                <Outlet />
+            </div>
+        </>
     );
 }

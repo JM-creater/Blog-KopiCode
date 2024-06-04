@@ -1,0 +1,83 @@
+.userDashboard__container {
+    height: 100vh;
+    width: 90vw;
+    background-color: var(--color-grey);
+    display: flex;
+    flex-direction: row;
+}
+
+#content1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 22vw;
+    height: 100vh;
+}
+
+#content1 > input {
+    width: 15em;
+    margin-top: 2em;
+}
+
+#content1 > header {
+    width: inherit;
+    background-color: transparent;
+}
+
+#dashboard__header > p {
+    font-size: 15px;
+    max-width: 85%;
+    margin-left: 1.5em;
+    color: var(--color-blue);
+    
+}
+
+header > h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-blue);
+    width: inherit;
+    line-height: .5;
+    margin-left: 1em;
+}
+
+.dashboard__contacts {
+    width: 10em;
+    display: inline-grid;
+    grid-template-rows: auto auto auto;
+    margin-bottom: 2em;
+}
+
+h5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    width: inherit;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.dashboard__contacts > #dashboard__socialsIcon {
+    font-size: 1.5em;
+    transition: transform 0.4s ease-in, color 0.4s ease-in;
+    text-align: center;
+}
+
+.dashboard__contacts > #dashboard__socialsIcon:hover {
+    color: var(--color-blue);
+    transform: translateY(-8px);
+    transition: all ease-in .4s;
+}
+
+/*CONTENT 2 STYLES*/
+#content2 {
+    width: 68vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    padding-top: 2em;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,4 +1,3 @@
-import NavigationBar from "../../components/Navbar.Landing/NavigationBar";
 import dev1 from './DevImages/martin-prof.jpg';
 import dev2 from './DevImages/racel-prof.png';
 import './AboutUs.css'
@@ -7,7 +6,6 @@ import Footer from "../../components/footer/footer";
 
 function AboutUs () {
     return <>
-        <NavigationBar/>
         <div className="aboutUs__mainContainer">
             <h1 id="aboutUs__headerText">What is KopiCode?</h1>
             <p>Welcome to KopiCode – your go-to community for programmers, especially students.

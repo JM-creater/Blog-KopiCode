@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Lottie from "lottie-react";
 import animation from './lottie animation/dog-animetion.json';
 import FilledButton from "../../components/Buttons/FilledButton";
-import NavigationBar from '../../components/Navbar.Landing/NavigationBar'
+
 
 type LoginFieldType = {
     username?: string;
@@ -22,7 +22,6 @@ const onFinishFailed: FormProps<LoginFieldType>['onFinishFailed'] = (errorInfo) 
 
 const Login: React.FC = () => (
     <>
-    <NavigationBar/>
     <div className="login__mainContent">
         <div className="login__content1">
             {/* container for the form*/}

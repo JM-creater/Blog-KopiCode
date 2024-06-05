@@ -1,0 +1,122 @@
+nav {
+    padding: 20px 20px 10px;
+    max-height: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row;
+    position: static;
+    width: 100%;
+    background-color: var(--color-black);
+}
+
+nav > img {
+    width: 100%;
+    max-width: 8em;
+}
+
+#dashboard__search {
+    width: 100%;
+    max-width: 30%;
+    background-color: transparent;
+}
+
+#dashboard__search::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+nav ul{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    margin-right: 40px;
+}
+
+ul li {
+    padding: 7px 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+ul li:hover {
+    background-color: var(--color-blue);
+}
+
+#navLinks-user {
+    text-decoration: none;
+    color: inherit;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button {
+    color: white;
+}
+
+.open-sidebar-button, 
+.close-sidebar-button{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #sidebar-active {
+        display: none;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        margin: 0;
+        z-index: 10;
+        width: 300px;
+        height: 100vh;
+        padding-top: 20px;
+
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        transition: 0.45s ease-out;
+    }
+
+    #navLinks-user {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .open-sidebar-button {
+        margin-right: 3em;
+    }
+
+    .open-sidebar-button, 
+    .close-sidebar-button {
+        display: block;
+        justify-content: flex-start;
+    }
+
+    #sidebar-active:checked ~ ul {
+        right: 0;
+    }
+
+    #dashboard__search {
+        width: 100%;
+        max-width: 35%;
+
+    }
+}

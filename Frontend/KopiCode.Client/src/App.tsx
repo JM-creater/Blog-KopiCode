@@ -12,9 +12,8 @@ import { UserAuthRegisterProvider } from './state/RegisterState';
 import AboutUs from './pages/AboutUs/AboutUs';
 import NavigationBar from './components/Navbar.Landing/NavigationBar';
 //  when user is logged in
-import Sidebar from './components/Sidebar.UserDashboard/Sidebar';
 import UserDashboard from './pages/Dashboard/User.Dashboard/UserDashboard';
-
+import NavbarUser from './components/NavBar.UserDashboard/NavbarUser';
 
 function App() {
 
@@ -36,7 +35,7 @@ function App() {
               </UserAuthRegisterProvider>
             }
           />
-          <Route path='/userDashboard' element={ <Sidebar/> }>
+          <Route path='/userDashboard' element={<NavbarUser/>}>
             <Route index element={  <UserDashboard/>  }/>
           </Route>
         </Routes>

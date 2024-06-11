@@ -1,5 +1,5 @@
 nav {
-    padding: 20px 20px 0px;
+    padding: 20px;
     max-height: 2em;
     display: flex;
     justify-content: space-between;
@@ -20,12 +20,16 @@ nav.transparent {
 
 .nav__buttonGroup {
     margin-right: 40px;
-    margin-bottom: 20px;
 }
 
 #webLogo {
-    width: 100%;
-    max-width: 10em;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;   
+    font-style: normal;
+    font-size: clamp(25px, 1vw, 50px);
+    color: var(--color-black);
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 800px) {

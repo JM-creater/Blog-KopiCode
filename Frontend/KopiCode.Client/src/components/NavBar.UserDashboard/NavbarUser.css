@@ -1,4 +1,4 @@
-nav {
+#navbar__user {
     padding: 20px 20px 10px;
     max-height: 2em;
     display: flex;
@@ -10,15 +10,21 @@ nav {
     background-color: var(--color-black);
 }
 
-nav > img {
-    width: 100%;
-    max-width: 8em;
+#dashboard-logo {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
 }
 
 #dashboard__search {
     width: 100%;
     max-width: 30%;
     background-color: transparent;
+    color: white;
 }
 
 #dashboard__search::placeholder {
@@ -30,13 +36,13 @@ nav ul{
     color: white;
     display: flex;
     flex-direction: row;
-    gap: 20px;
-    list-style: none;
     margin-right: 40px;
+    list-style: none;
+    right: 100%;
 }
 
 ul li {
-    padding: 7px 15px;
+    padding: 15px;
     border-radius: 6px;
     transition: all 0.3s;
 }

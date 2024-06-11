@@ -30,7 +30,7 @@ export default function NavigationBar (){
     return (
         <>
             <nav id='navbar'>
-                <Link to='/'><img src={WebLogo} alt="web logo dark color" id='webLogo' /></Link>
+                <Link to='/' id='webLogo'>KopiCode.</Link>
                 <div className="nav__buttonGroup">
                     <Link to='/aboutUs'><TextButton label={'About Us'}/></Link>
                     <Link to='/login'><OutlinedButton label={'Sign In'}/></Link>

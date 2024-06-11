@@ -7,7 +7,7 @@
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-size: 75%; /* Makes the image smaller */
     background-position: right bottom; /* Moves the image to the lowest right corner */
-    height: 100vh; /* Ensure the container is full height for demonstration */
+    height: 100svh; /* Ensure the container is full height for demonstration */
 }
 
 .login__content1, .login__content2 {
@@ -63,7 +63,7 @@
 #login__createAccountButton {
     color: var(--color-lightGrey);
     margin-left: 3em;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     align-self: flex-start;
 }
 
@@ -75,12 +75,13 @@
 @media only screen and (max-width: 800px) {
     .login__mainContent {
         flex-direction: column;
-        height: fit-content;
         background-size: 100%;
     }
     
     .login__form {
-        width: 20em;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
     }
 
     #login__forgotPassButton {

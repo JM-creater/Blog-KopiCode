@@ -1,5 +1,5 @@
 import './NavbarUser.css'
-import logo from '../../components/logo-image/white-logo.png';
+// import logo from '../../components/logo-image/white-logo.png';
 import { Outlet } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Input } from 'antd';
@@ -8,7 +8,8 @@ import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 const NavbarUser: React.FC = () => {
     return <>
         <nav id='navbar__user'>
-            <img src={logo} alt="weblogo for user navbar" />
+            {/* <img src={logo} alt="weblogo for user navbar" /> */}
+            <Link to={'/userDashboard'} id='dashboard-logo'>KopiCode.</Link>
             <Input id='dashboard__search' placeholder='Search Topic'/>
             <label htmlFor="sidebar-active" className='open-sidebar-button'>
                 <MenuOutlined />

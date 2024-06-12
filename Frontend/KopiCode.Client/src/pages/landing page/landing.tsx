@@ -26,15 +26,15 @@ function Landing (){
             {/* START OF FEATURES SECTION */}
             <div className="mainContent__features">
                 <header id='header__feature'><h1 className='features__headerText'>Our Features</h1></header>
-                <div className="feature1">
+                <div className="feature">
                     <Lottie id='feature__animation' animationData={feature1}/>
                     <h2 id='landing__features'>Share Your Coding Insights: Publish Your Blog on Kopicode</h2>
                 </div>
-                <div className="feature2">
+                <div className="feature">
                     <h2 id='landing__features'>Code Notes: Capture Your Insights and Ideas on Kopicode</h2>
                     <Lottie id='feature__animation' animationData={feature2}/>
                 </div>
-                <div className="feature3">
+                <div className="feature">
                     <Lottie id='feature__animation' animationData={feature3}/>
                     <h2 id='landing__features'>Stuck on a problem or have a question?
                          Interact with other programmers on Kopicode to ask for tips and solutions!</h2>

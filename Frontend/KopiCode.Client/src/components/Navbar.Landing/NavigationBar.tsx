@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import './NavigationBar.css';
-import WebLogo from '../logo-image/dark-logo.png';
 import OutlinedButton from '../Buttons/OutlinedButton';
 import TextButton from '../Buttons/TextButton';
 import { Link } from 'react-router-dom';

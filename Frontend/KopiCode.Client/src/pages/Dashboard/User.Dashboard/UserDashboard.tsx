@@ -1,13 +1,20 @@
-
-import { Tabs } from 'antd';
+import React from 'react';
+import { FloatButton, Tabs, Input, Button } from 'antd';
 import './userDashboard.css'
 import RelevantBlogs from '../../../components/Blogs.Component/RelevantBlogs';
+import headerAnimation from '../../login page/lottie animation/dog-animetion.json';
+import Lottie from 'lottie-react';
 // import sample from './wuthering-waves.jpg';
 
+const { TextArea } = Input;
 const { TabPane } = Tabs;
 
 const UserDashboard: React.FC = () => {
     return <>
+    <div className='dashboard__hero'>
+        <h1 id='hero-text'>"Focus is the key to debugging: a single line of code can make all the difference."</h1>
+        <Lottie animationData={headerAnimation} className='dashboard__header-animation'/>
+    </div>
     <div className="userDashboard__container">
         <Tabs defaultActiveKey='1' className='blogs-tabs'>
             <TabPane tab='Relevant' className='tab' key={1}>
@@ -30,8 +37,11 @@ const UserDashboard: React.FC = () => {
             </TabPane>
         </Tabs>
         <div className="createNotes-container">
-            <h1>test</h1>
+            <span id='dashboard__createNotes'>Create Notes</span>
+            <TextArea className='textArea-note' placeholder='Enter your notes here' rows={20}/>
+            <Button type='primary'>Save Note</Button>
         </div>
+        <FloatButton.BackTop />
     </div>
     </>
 };

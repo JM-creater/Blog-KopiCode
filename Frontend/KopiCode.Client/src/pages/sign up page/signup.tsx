@@ -44,7 +44,7 @@ const SignUp: React.FC = () => {
                 <Form.Item<Register>
                     name='Password'
                     rules={[{ required: true, message:'Please set a password' }]}>
-                    <Input placeholder='Password' id='signUp__input' size='large' />
+                    <Input placeholder='Password' id='signUp__input' size='large' type='password'/>
                 </Form.Item>
                     {/* TERMS AND CONDITION CHECKBOX */}
                 <Form.Item<Register>

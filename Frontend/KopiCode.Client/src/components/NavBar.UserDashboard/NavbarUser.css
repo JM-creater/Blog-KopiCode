@@ -16,7 +16,7 @@
     font-weight: 900;
     font-style: normal;
     font-size: 30px;
-    color: white;
+    color: var(--color-blue);
     text-decoration: none;
 }
 
@@ -31,7 +31,10 @@
     color: white;
     opacity: 0.5;
 }
-
+/*start of nav buttons*/
+.user-avatar{
+    background-color: black;
+}
 nav ul{
     color: white;
     display: flex;
@@ -41,19 +44,21 @@ nav ul{
     right: 100%;
 }
 
+nav li:hover {
+    text-decoration: underline var(--color-blue) 2px;
+    transition: all ease-in-out 0.4s;
+}
+
 ul li {
     padding: 15px;
     border-radius: 6px;
     transition: all 0.3s;
 }
 
-ul li:hover {
-    background-color: var(--color-blue);
-}
-
 #navLinks-user {
     text-decoration: none;
     color: inherit;
+    font-size: 20px;
 }
 
 #sidebar-active {
@@ -65,14 +70,35 @@ ul li:hover {
 }
 
 .open-sidebar-button, 
-.close-sidebar-button{
+.close-sidebar-button,
+#nav__text{
     display: none;
+}
+/*end of nav buttons*/
+
+/*Dropdown style*/
+#dropdown__item {
+    color: white;
+}
+
+#dropdown__item:hover {
+    color: var(--color-blue);
 }
 
 @media only screen and (max-width: 800px) {
     nav {
         justify-content: space-between;
         width: 100%;
+    }
+
+    ul li:hover {
+        background-color: var(--color-blue);
+    }
+
+    ul li {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
     #sidebar-active {
@@ -111,7 +137,8 @@ ul li:hover {
     }
 
     .open-sidebar-button, 
-    .close-sidebar-button {
+    .close-sidebar-button,
+    #nav__text {
         display: block;
         justify-content: flex-start;
     }

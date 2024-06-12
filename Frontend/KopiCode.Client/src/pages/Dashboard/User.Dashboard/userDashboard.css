@@ -1,5 +1,5 @@
 .userDashboard__container {
-    height: 100vh;
+    height: 100svh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -42,11 +42,11 @@
 
 
 .blogs-tabs {
-    min-height: 80svh;
+    min-height: 100svh;
     padding: 20px;
     min-width: 60%;
 }
-
+  /*START OF BLOGS CONTAINER---TRANSPARENT SCROLLBAR*/
 .tab {
     height: 40em;
     overflow: auto;
@@ -66,25 +66,66 @@
     width: 12px; /* for Edge */
   }
   /* Track color */
-  .tab::-webkit-scrollbar-track {
+  .tab::-webkit-scrollbar-track,
+  .tab::-moz-scrollbar-track,
+  .tab::-ms-scrollbar-track,
+  .tab::-moz-scrollbar-thumb,
+  .tab::-ms-scrollbar-thumb {
     background: transparent; /* for Chrome, Safari, Opera */
   }
-  .tab::-moz-scrollbar-track {
-    background: transparent; /* for Firefox */
-  }
-  .tab::-ms-scrollbar-track {
-    background: transparent; /* for Edge */
-  }
+
   /* Handle color */
   .tab::-webkit-scrollbar-thumb {
     background-color: transparent; /* for Chrome, Safari, Opera */
     border-radius: 12px; /* for rounded corners */
   }
-  .tab::-moz-scrollbar-thumb {
-    background-color: transparent; /* for Firefox */
+
+  /*END OF BLOGS CONTAINER---TRANSPARENT SCROLLBAR*/
+
+  .createNotes-container {
+    background-color: var(--color-highlight);
+    width: 30vw;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
   }
-  .tab::-ms-scrollbar-thumb {
-    background-color: transparent; /* for Edge */
+
+
+  #dashboard__createNotes {
+    color: white;
+  }
+
+  #save-note_button {
+    background-color: var(--color-blue);
+    border: none;
+    font-weight: 600;
+  }
+
+  /*hero section*/
+  .dashboard__hero {
+    background-color: var(--color-black);
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #hero-text {
+    font-weight: 00;
+    /* color: var(--color-black); */
+    color: white;
+    font-size: 30px;
+    width: 30em;
+    line-height: 1.8;
+  }
+  /*lottie animation*/
+  .dashboard__header-animation {
+    width: 100%;
+    max-width: 20em;
   }
 
 @media only screen and (max-width: 800px) {

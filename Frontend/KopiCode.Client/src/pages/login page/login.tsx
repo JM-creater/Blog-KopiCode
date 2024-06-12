@@ -50,8 +50,10 @@ const Login: React.FC = () => (
                     </Form.Item>
                 </Form>
                 {/* BUTTONS FOR FORGOT PASSWORD, CREATE, AND SIGN IN */}
+                <div id="login__buttons">
                 <Button title="click here to reset password" type='text' id="login__forgotPassButton">Forgot Password?</Button>
                 <Link to='/signup'><Button title="Click here to create an account" type='text' id="login__createAccountButton">Don't have an account yet?</Button></Link>
+                </div>
                 <FilledButton id="login__signInButton" label="Sign In"/>
             </div>
         </div>
